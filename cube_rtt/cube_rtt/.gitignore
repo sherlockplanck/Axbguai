@@ -1,0 +1,31 @@
+# Keil / MDK build output
+MDK-ARM/build/
+MDK-ARM/cube_rtt/
+MDK-ARM/*.axf
+MDK-ARM/*.hex
+MDK-ARM/*.map
+MDK-ARM/*.htm
+MDK-ARM/*.lnp
+MDK-ARM/*.lst
+MDK-ARM/*.o
+MDK-ARM/*.d
+MDK-ARM/*.crf
+MDK-ARM/*.dep
+MDK-ARM/*.bak
+MDK-ARM/*.log
+MDK-ARM/build_codex.log
+
+# Local IDE and debug files
+MDK-ARM/*.uvgui.*
+MDK-ARM/*.uvguix.*
+MDK-ARM/DebugConfig/
+MDK-ARM/.eide/
+MDK-ARM/.cmsis/
+MDK-ARM/.vscode/
+
+# Generated/intermediate folders
+MDK-ARM/RTE/
+
+# Windows noise
+Thumbs.db
+Desktop.ini

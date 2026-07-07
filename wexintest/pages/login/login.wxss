@@ -1,0 +1,73 @@
+page {
+  min-height: 100vh;
+  background: #eef3f5;
+  color: #1f2933;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 120rpx 36rpx 64rpx;
+  box-sizing: border-box;
+}
+
+.login-panel,
+.change-panel {
+  padding: 36rpx;
+  border-radius: 8rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 24rpx rgba(27, 43, 65, 0.08);
+}
+
+.change-panel {
+  margin-top: 28rpx;
+}
+
+.title {
+  font-size: 42rpx;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.subtitle {
+  margin: 10rpx 0 34rpx;
+  color: #607080;
+  font-size: 26rpx;
+}
+
+.panel-title {
+  margin-bottom: 24rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  height: 88rpx;
+  margin-bottom: 22rpx;
+  padding: 0 24rpx;
+  border: 1rpx solid #d8e0e7;
+  border-radius: 8rpx;
+  background: #f8fafc;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+
+.login-button {
+  margin-top: 8rpx;
+  border-radius: 8rpx;
+  background: #00a86b;
+  color: #ffffff;
+  font-size: 30rpx;
+}
+
+.text-button {
+  margin-top: 18rpx;
+  padding: 0;
+  background: transparent;
+  color: #1f7a8c;
+  font-size: 28rpx;
+}
+
+.text-button::after {
+  border: 0;
+}

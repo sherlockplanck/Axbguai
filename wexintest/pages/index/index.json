@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "智能拐杖",
+  "navigationBarBackgroundColor": "#00a86b",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

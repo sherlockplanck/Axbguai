@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="login-panel">
+    <view class="title">智能拐杖登录</view>
+    <view class="subtitle">请输入账号和密码</view>
+
+    <input
+      class="input"
+      value="{{account}}"
+      placeholder="账号"
+      bindinput="onAccountInput"
+    />
+    <input
+      class="input"
+      value="{{password}}"
+      password="{{true}}"
+      placeholder="密码"
+      bindinput="onPasswordInput"
+    />
+
+    <button class="login-button" bindtap="login">登录</button>
+    <button class="text-button" bindtap="showChangePassword">忘记密码</button>
+  </view>
+
+  <view wx:if="{{changingPassword}}" class="change-panel">
+    <view class="panel-title">修改密码</view>
+    <input
+      class="input"
+      value="{{oldPassword}}"
+      password="{{true}}"
+      placeholder="请输入旧密码"
+      bindinput="onOldPasswordInput"
+    />
+    <input
+      class="input"
+      value="{{newPassword}}"
+      password="{{true}}"
+      placeholder="请输入新密码"
+      bindinput="onNewPasswordInput"
+    />
+    <button class="login-button" bindtap="changePassword">确认修改</button>
+    <button class="text-button" bindtap="hideChangePassword">取消</button>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<view class="page">
+  <map
+    class="map"
+    latitude="{{centerLatitude}}"
+    longitude="{{centerLongitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+  ></map>
+
+  <view class="panel">
+    <view class="panel-header">
+      <view>
+        <view class="title">实时定位</view>
+        <view class="subtitle">最近更新：{{lastUpdate}}</view>
+      </view>
+      <view wx:if="{{loading}}" class="loading">刷新中</view>
+    </view>
+
+    <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+
+    <view wx:if="{{!hasLocation}}" class="empty">等待 OneNET 经纬度数据</view>
+
+    <view wx:else class="location">
+      <view>经度：{{currentLongitude}}</view>
+      <view>纬度：{{currentLatitude}}</view>
+    </view>
+
+    <view class="track-title">10 分钟内轨迹点</view>
+    <view wx:if="{{!hasTrackPoints}}" class="empty">暂无有效轨迹点</view>
+
+    <view wx:for="{{trackPoints}}" wx:key="id" class="track-item">
+      <view class="track-index">{{index + 1}}</view>
+      <view class="track-body">
+        <view>{{item.timeText}}</view>
+        <view class="track-coord">{{item.latitude}}, {{item.longitude}}</view>
+      </view>
+    </view>
+  </view>
+</view>

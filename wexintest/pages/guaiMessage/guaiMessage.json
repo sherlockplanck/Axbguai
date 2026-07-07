@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "云端消息",
+  "navigationBarBackgroundColor": "#1f7a8c",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

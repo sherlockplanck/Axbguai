@@ -1,0 +1,60 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCMAKE_MAKE_PROGRAM=D:/Espressif/tools/ninja/1.12.1/ninja.exe -DCCACHE_ENABLE=1 D:\xiaozhi\xiaozhi-esp32
+fatal: detected dubious ownership in repository at 'D:/Espressif/frameworks/esp-idf-v5.5.4'
+'D:/Espressif/frameworks/esp-idf-v5.5.4' is owned by:
+	DESKTOP-QPQ5J0F/A (S-1-5-21-2958012817-3092545537-3161251325-1001)
+but the current user is:
+	DESKTOP-QPQ5J0F/CodexSandboxOffline (S-1-5-21-2958012817-3092545537-3161251325-1006)
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory D:/Espressif/frameworks/esp-idf-v5.5.4
+CMake Warning at D:/Espressif/frameworks/esp-idf-v5.5.4/tools/cmake/project.cmake:596 (message):
+  enabled ccache in build but ccache program not found
+Call Stack (most recent call first):
+  CMakeLists.txt:13 (project)
+
+
+CMake Error at D:/Espressif/frameworks/esp-idf-v5.5.4/tools/cmake/project.cmake:601 (__project):
+  The CMAKE_C_COMPILER:
+
+    xtensa-esp32s3-elf-gcc
+
+  is not a full path and was not found in the PATH.  Perhaps the extension is
+  missing?
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CC" or the CMake cache entry CMAKE_C_COMPILER to the full path to
+  the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:13 (project)
+
+
+CMake Error at D:/Espressif/frameworks/esp-idf-v5.5.4/tools/cmake/project.cmake:601 (__project):
+  The CMAKE_CXX_COMPILER:
+
+    xtensa-esp32s3-elf-g++
+
+  is not a full path and was not found in the PATH.  Perhaps the extension is
+  missing?
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:13 (project)
+
+
+CMake Error at D:/Espressif/frameworks/esp-idf-v5.5.4/tools/cmake/project.cmake:601 (__project):
+  The CMAKE_ASM_COMPILER:
+
+    xtensa-esp32s3-elf-gcc
+
+  is not a full path and was not found in the PATH.  Perhaps the extension is
+  missing?
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "ASM" or the CMake cache entry CMAKE_ASM_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:13 (project)
+
+

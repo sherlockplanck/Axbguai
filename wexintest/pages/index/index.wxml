@@ -1,0 +1,53 @@
+<view class="page">
+  <view class="header">
+    <view class="title">智能拐杖</view>
+    <view class="subtitle">设备 data</view>
+  </view>
+
+  <view class="status-bar">
+    <text>最近更新：{{lastUpdate}}</text>
+    <text wx:if="{{loading}}">刷新中</text>
+  </view>
+
+  <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+
+  <view class="action-row">
+    <button class="action-button" bindtap="openMap">查看老人位置</button>
+    <button class="action-button" bindtap="openGuaiMessage">查看老人消息</button>
+    <button class="action-button" bindtap="openContacts">联系人设置</button>
+  </view>
+
+  <view class="metrics">
+    <view class="metric">
+      <view class="metric-icon">经</view>
+      <view class="metric-value">{{longitude}}</view>
+      <view class="metric-label">经度</view>
+    </view>
+
+    <view class="metric">
+      <view class="metric-icon">纬</view>
+      <view class="metric-value">{{latitude}}</view>
+      <view class="metric-label">纬度</view>
+    </view>
+
+    <view class="metric {{fallAlarmActive ? 'metric-alert' : ''}}">
+      <view class="metric-icon">!</view>
+      <view class="metric-value">{{fallAlarm}}</view>
+      <view class="metric-label">摔倒警告</view>
+    </view>
+  </view>
+
+  <view class="message-panel">
+    <view class="panel-title">留言</view>
+    <textarea
+      class="message-input"
+      value="{{textMsg}}"
+      placeholder="输入要发送给老人的留言"
+      maxlength="80"
+      bindinput="onMessageInput"
+    ></textarea>
+    <button class="send-button" loading="{{sending}}" disabled="{{sending}}" bindtap="sendMessage">
+      发送
+    </button>
+  </view>
+</view>

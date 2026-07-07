@@ -1,0 +1,101 @@
+<view class="page">
+  <view class="header">
+    <view class="title">联系人设置</view>
+    <view class="subtitle">设置紧急联系人和紧急程度</view>
+  </view>
+
+  <view class="status-bar">
+    <text>最近读取：{{lastUpdate}}</text>
+    <text wx:if="{{loading}}">读取中</text>
+  </view>
+
+  <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+  <view wx:if="{{submitMessage}}" class="notice">{{submitMessage}}</view>
+
+  <view class="contact-card">
+    <view class="card-title">联系人 1</view>
+
+    <block wx:if="{{isEditing}}">
+      <input
+        class="input"
+        value="{{name1}}"
+        maxlength="128"
+        placeholder="请输入联系人1姓名"
+        bindinput="onName1Input"
+      />
+      <input
+        class="input input-spaced"
+        value="{{contact1}}"
+        maxlength="128"
+        placeholder="请输入联系人1电话号码"
+        bindinput="onContact1Input"
+      />
+    </block>
+
+    <block wx:else>
+      <view class="info-row">
+        <text class="info-label">姓名</text>
+        <text wx:if="{{name1}}" class="info-value">{{name1}}</text>
+        <text wx:else class="info-empty">未设置</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">电话</text>
+        <text wx:if="{{contact1}}" class="info-value">{{contact1}}</text>
+        <text wx:else class="info-empty">未设置</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="contact-card">
+    <view class="card-title">联系人 2</view>
+
+    <block wx:if="{{isEditing}}">
+      <input
+        class="input"
+        value="{{name2}}"
+        maxlength="128"
+        placeholder="请输入联系人2姓名"
+        bindinput="onName2Input"
+      />
+      <input
+        class="input input-spaced"
+        value="{{contact2}}"
+        maxlength="128"
+        placeholder="请输入联系人2电话号码"
+        bindinput="onContact2Input"
+      />
+    </block>
+
+    <block wx:else>
+      <view class="info-row">
+        <text class="info-label">姓名</text>
+        <text wx:if="{{name2}}" class="info-value">{{name2}}</text>
+        <text wx:else class="info-empty">未设置</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">电话</text>
+        <text wx:if="{{contact2}}" class="info-value">{{contact2}}</text>
+        <text wx:else class="info-empty">未设置</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="priority-panel">
+    <view class="panel-title">紧急程度</view>
+    <view class="priority-row">
+      <button class="priority-button {{contact1Priority ? 'active' : ''}}" disabled="{{!isEditing}}" data-contact="1" bindtap="selectPriority">
+        联系人1优先
+      </button>
+      <button class="priority-button {{contact2Priority ? 'active' : ''}}" disabled="{{!isEditing}}" data-contact="2" bindtap="selectPriority">
+        联系人2优先
+      </button>
+    </view>
+  </view>
+
+  <button wx:if="{{!isEditing}}" class="edit-button" bindtap="startEdit">
+    修改
+  </button>
+  <button wx:else class="submit-button" loading="{{saving}}" disabled="{{saving}}" bindtap="saveContacts">
+    设置完成
+  </button>
+</view>

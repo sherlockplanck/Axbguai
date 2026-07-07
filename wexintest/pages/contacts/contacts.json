@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "联系人设置",
+  "navigationBarBackgroundColor": "#1f7a8c",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}
